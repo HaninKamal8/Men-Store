@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project3/core/homeNav/BottomNavBar/NavBar.dart';
 
 import '../Auth/SignIn/SignIn.dart';
+import '../Location/loaction.dart';
 import '../core/helpers/logoutDialog.dart';
 import '../home/view.dart';
 import 'accountTile.dart';
@@ -80,7 +81,14 @@ class AccountScreen extends StatelessWidget {
             AccountTile(
               icon: Icons.home_outlined,
               title: "Address Book",
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => AddressScreen(),
+                  ),
+                );
+              },
             ),
 
             Divider(color: Colors.grey.shade300),
